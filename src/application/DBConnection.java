@@ -5,10 +5,20 @@ import java.sql.*;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+//TODO: clean up and comment code 
 
+/**
+ * class for provide all nessesary methods
+ * for database interaction with the local
+ * sqlite db
+ * @author chris
+ *
+ */
 public class DBConnection {
 
-	
+	/**
+	 * create the table for the items
+	 */
 	public static void createTable() {
         Connection c = null;
         Statement stmt = null;
@@ -171,7 +181,6 @@ public class DBConnection {
 
 
             stmt.close();
-            //c.commit();
             c.close();
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
